@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { interval, Subscription } from 'rxjs';
+import { LobbyService } from 'src/app/services/lobby.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  
+  private updateSubscription: Subscription;
+  playerList: Array<string>;
+  gameList: Array<Object>;
 
-  constructor() { }
 
-  ngOnInit(): void {
+  constructor( private lobbyService:LobbyService) {
+    this.updateSubscription = interval(10000).subscribe(()=>this.refresh())
+    this.playerList = new Array<string>();
+    this.gameList = new Array<Object>();
   }
 
+
+  ngOnInit(): void {
+    
+  }
+
+  refresh()
+  {
+    this.
+
+  }
 }

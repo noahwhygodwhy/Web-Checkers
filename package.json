@@ -1,5 +1,27 @@
 {
-  "dependencies": {
-    "@angular/animation": "^4.0.0-beta.8"
+  "name": "web-checkers-angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start":"cd code/backend; npm start; cd ../frontend; npm start;",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noahwhygodwhy/Web-Checkers.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/noahwhygodwhy/Web-Checkers/issues"
+  },
+  "homepage": "https://github.com/noahwhygodwhy/Web-Checkers#readme",
+  "workspaces": {
+    "packages": [
+        "backend",
+        "frontend",
+        "shared"
+    ]
   }
 }
