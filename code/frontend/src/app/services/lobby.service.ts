@@ -17,7 +17,7 @@ export class LobbyService {
   }
   getPlayerList():Promise<Array<Player>> {
     console.log("getting player list");
-    return axios.get(baseURL + "/api/lobby/playerlist")
+    return axios.get(baseURL + "/api/lobby/playerlist" )
   }  
   getGameList():Promise<Array<Game>> {
     return axios.get(baseURL + "/api/lobby/gamelist")
