@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Player } from '../../../../shared/models/player'
 import { Game } from '../../../../shared/models/game'
 import axios from 'axios'
+import { AxiosResponse } from 'axios';
 
 
 const baseURL = 'http://localhost:8080';
@@ -15,11 +16,11 @@ export class LobbyService {
   constructor() {
 
   }
-  getPlayerList():Promise<Array<Player>> {
+  getPlayerList():Promise<AxiosResponse<Array<Player>>>  {
     console.log("getting player list");
     return axios.get(baseURL + "/api/lobby/playerlist" )
   }  
-  getGameList():Promise<Array<Game>> {
+  getGameList():Promise<AxiosResponse<Array<Game>>> {
     return axios.get(baseURL + "/api/lobby/gamelist")
   }
 

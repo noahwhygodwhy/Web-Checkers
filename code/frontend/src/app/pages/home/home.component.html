@@ -1,1 +1,21 @@
 <p>home works!</p>
+
+<div clas="container">
+    <div class="row">
+        <div class="col col-10">
+        </div>
+        <div class="col col-2">
+            <mat-table [dataSource]="playerList" class="mat-elevation-z8">
+
+
+                <ng-component *ngFor="let col of playerTableColumns" matColumnDef="{{col}}">
+                    <th mat-header-cell *matHeaderCellDef>{{titleCase(col)}}</th>
+                    <td mat-cell *matCellDef="let element">{{element.name}}</td>
+                </ng-component>
+                
+                <tr mat-header-row *matHeaderRowDef="playerTableColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: playerTableColumns;"></tr>
+            </mat-table>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 import { LobbyService } from 'src/app/services/lobby.service';
+import { Game } from '../../../../../shared/models/game';
+import { Player } from '../../../../../shared/models/player';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +12,17 @@ import { LobbyService } from 'src/app/services/lobby.service';
 export class HomeComponent implements OnInit {
   
   private updateSubscription: Subscription;
-  playerList: Array<string>;
-  gameList: Array<Object>;
+
+  playerTableColumns = ['name']
+
+  playerList: Array<Player>;
+  gameList: Array<Game>;
 
 
   constructor( private lobbyService:LobbyService) {
     this.updateSubscription = interval(10000).subscribe(()=>this.refresh())
-    this.playerList = new Array<string>();
-    this.gameList = new Array<Object>();
+    this.playerList = new Array<Player>();
+    this.gameList = new Array<Game>();
   }
 
 
@@ -25,8 +30,11 @@ export class HomeComponent implements OnInit {
     this.refresh();
   }
 
-  refresh()
-  {
-    this.lobbyService.getPlayerList().then((e)=>{console.log(e)});
+  refresh() {
+    this.lobbyService.getPlayerList().then((e)=>{this.playerList = e.data;});
+  }
+
+  titleCase(str:string):string {
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
   }
 }

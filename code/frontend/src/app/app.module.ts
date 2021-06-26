@@ -9,6 +9,9 @@ import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { MatTableModule} from '@angular/material/table'
+import { MatListModule} from '@angular/material/list'
+import { MatGridListModule} from '@angular/material/grid-list'
 // import { MatIconModule } from '@angular/material/icon'; 
 
 
@@ -21,6 +24,9 @@ const IO = [
   FormsModule,
   ReactiveFormsModule,
   BrowserAnimationsModule,
+  MatTableModule,
+  MatListModule,
+  MatGridListModule,
   // MatIconModule,
 ]
 

@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start":"cd code/backend; npm start; cd ../frontend; npm start;",
+    "start": "cd code/backend; npm start; cd ../frontend; npm start;",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,9 +19,12 @@
   "homepage": "https://github.com/noahwhygodwhy/Web-Checkers#readme",
   "workspaces": {
     "packages": [
-        "backend",
-        "frontend",
-        "shared"
+      "backend",
+      "frontend",
+      "shared"
     ]
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
   }
 }
