@@ -1,4 +1,8 @@
 
+
+
+
+
 .env
 
 code/frontend/.env
@@ -8,14 +12,24 @@ code/frontend/.env
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-code/frontend/dist
-code/frontend/tmp
-code/frontend/out-tsc
+/code/frontend/dist
+/code/frontend/tmp
+/code/frontend/out-tsc
+
+/code/backend/dist
+/code/backend/tmp
+/code/backend/out-tsc
+
+/code/shared/dist
+/code/shared/tmp
+/code/shared/out-tsc
 # Only exists if Bazel was run
 code/frontend/bazel-out
 
 # dependencies
-code/frontend/node_modules
+/code/frontend/node_modules
+/code/backend/node_modules
+/code/shared/node_modules
 
 # profiling files
 chrome-profiler-events*.json

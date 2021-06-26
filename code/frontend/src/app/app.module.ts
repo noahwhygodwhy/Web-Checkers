@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatInputModule } from '@angular/material/input'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 // import { MatIconModule } from '@angular/material/icon'; 
 
 
@@ -19,6 +20,7 @@ const IO = [
   MatFormFieldModule,
   FormsModule,
   ReactiveFormsModule,
+  BrowserAnimationsModule,
   // MatIconModule,
 ]
 

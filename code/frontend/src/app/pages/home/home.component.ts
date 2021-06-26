@@ -22,12 +22,11 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
-    
+    this.refresh();
   }
 
   refresh()
   {
-    this.
-
+    this.lobbyService.getPlayerList().then((e)=>{console.log(e)});
   }
 }

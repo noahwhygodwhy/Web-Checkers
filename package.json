@@ -2,7 +2,7 @@
   "name": "web-checkers-angular",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start":"cd code/backend; npm start; cd ../frontend; npm start;",
     "test": "echo \"Error: no test specified\" && exit 1"
