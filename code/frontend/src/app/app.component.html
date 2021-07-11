@@ -1,15 +1,4 @@
-
-<mat-toolbar color="primary">
-    <span>Web Checkers</span>
-    <span class="spacer"></span>
-    <span>
-        <mat-form-field>
-            <mat-label>Name</mat-label>
-            <input matInput type="text" [formControl]="nameFormControl">
-        </mat-form-field>
-    </span>
-</mat-toolbar>
-
+<app-navigation (navAction)="navAction($event)"></app-navigation>
 <router-outlet></router-outlet>
 
 

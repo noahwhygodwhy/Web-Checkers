@@ -17,4 +17,21 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void { }
+
+  navAction(event:any)
+  {
+    switch(event.action)
+    {
+      case "newGame":
+        this.newGame();
+        break;
+      default:
+        console.error(`action ${event.action} not supported`)
+        break;
+    }
+  }
+  newGame()
+  {
+    console.log("new game");
+  }
 }

@@ -11,7 +11,10 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatTableModule} from '@angular/material/table'
 import { MatListModule} from '@angular/material/list'
-import { MatGridListModule} from '@angular/material/grid-list'
+import { MatGridListModule} from '@angular/material/grid-list';
+import { NavigationComponent } from './components/navigation/navigation.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon'
 // import { MatIconModule } from '@angular/material/icon'; 
 
 
@@ -27,14 +30,16 @@ const IO = [
   MatTableModule,
   MatListModule,
   MatGridListModule,
-  // MatIconModule,
+  MatButtonModule,
+  MatIconModule,
 ]
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    NavigationComponent
   ],
   imports: IO,
   exports: IO,
